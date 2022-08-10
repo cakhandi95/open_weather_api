@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 ///
 
 abstract class WeatherCityRemoteDataSource {
-  Future<WeatherResponse> getWeatherCity(String city, String longitude, String latitude);
+  Future<WeatherResponse> getWeatherCity(String city);
 }
 
 class WeatherCityRemoteDataSourceImpl implements WeatherCityRemoteDataSource {
@@ -19,12 +19,12 @@ class WeatherCityRemoteDataSourceImpl implements WeatherCityRemoteDataSource {
   WeatherCityRemoteDataSourceImpl({required this.client});
 
   @override
-  Future<WeatherResponse> getWeatherCity(String city, String longitude, String latitude) async {
+  Future<WeatherResponse> getWeatherCity(String city) async {
 
     String? url;
     String apiKey = ConfigApp.apiKEY;
 
-    url = "${ConfigApp.baseURL}?lat=$latitude&lon=$longitude&appid=$apiKey&q=$city";
+    url = "${ConfigApp.baseURL}?appid=$apiKey&q=$city";
 
     final response = await client.get(
       Uri.parse(url),

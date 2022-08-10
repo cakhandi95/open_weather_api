@@ -12,10 +12,10 @@ class WeatherCityCubit extends Cubit<WeatherCityState> {
 
   WeatherCityCubit({required this.getWeatherCity}) : super(const WeatherCityInitState());
 
-  Future<void> get(String city, String longitude, String latitude) async {
+  Future<void> get(String city) async {
     emit(const WeatherCityLoadingState());
 
-    final result = await getWeatherCity.execute(city, longitude, latitude);
+    final result = await getWeatherCity.execute(city);
 
     result.fold((failure) => emit(WeatherCityErrorState(httpStatus: failure.httpStatus, message: failure.message)), (data) => {
       emit(WeatherCityLoadedState(data))

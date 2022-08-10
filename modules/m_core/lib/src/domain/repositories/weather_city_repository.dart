@@ -9,5 +9,5 @@ import 'package:m_core/src/utils/failure.dart';
 ///
 
 abstract class WeatherCityRepository {
-  Future<Either<Failure,WeatherResponse>> getWeatherCity(String city, String longitude, String latitude);
+  Future<Either<Failure,WeatherResponse>> getWeatherCity(String city);
 }

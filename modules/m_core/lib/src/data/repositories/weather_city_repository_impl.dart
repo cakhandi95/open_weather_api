@@ -16,9 +16,9 @@ class WeatherCityRepositoryImpl extends WeatherCityRepository {
   WeatherCityRepositoryImpl({required this.remoteDataSource});
 
   @override
-  Future<Either<Failure, WeatherResponse>> getWeatherCity(String city, String longitude, String latitude) async {
+  Future<Either<Failure, WeatherResponse>> getWeatherCity(String city) async {
     try {
-      final result = await remoteDataSource.getWeatherCity(city, longitude, latitude);
+      final result = await remoteDataSource.getWeatherCity(city);
       return Right(result.toJson());
     } on ServerException catch (e) {
       return Left(ServerFailure(e.httpStatus.toString(), e.message));

@@ -13,8 +13,8 @@ class GetWeatherCity {
 
   GetWeatherCity(this.repository);
 
-  Future<Either<Failure,WeatherResponse>> execute(String city, String longitude, String latitude){
-    return repository.getWeatherCity(city, longitude, latitude);
+  Future<Either<Failure,WeatherResponse>> execute(String city){
+    return repository.getWeatherCity(city);
   }
 
 }
