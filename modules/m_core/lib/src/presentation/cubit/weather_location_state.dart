@@ -35,10 +35,11 @@ class WeatherLocationLoadedState extends WeatherLocationState {
 
 class WeatherLocationErrorState extends WeatherLocationState {
 
+  final String httpStatus;
   final String message;
 
-  const WeatherLocationErrorState(this.message);
+  const WeatherLocationErrorState({required this.httpStatus, required this.message});
 
   @override
-  List<Object?> get props => [message];
+  List<Object?> get props => [httpStatus, message];
 }

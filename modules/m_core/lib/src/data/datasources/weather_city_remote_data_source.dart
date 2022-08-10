@@ -1,9 +1,6 @@
 import 'package:m_core/m_core.dart';
-import 'package:m_core/src/data/models/weather_response.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:m_core/src/utils/exception.dart';
-import 'package:m_core/src/utils/network_utils.dart';
 
 ///
 /// Created by handy on 09/08/22
