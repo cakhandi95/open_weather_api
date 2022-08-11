@@ -1,16 +1,21 @@
 # open_weather_api
 
-A new Flutter project.
+Open Weather API.
 
-## Getting Started
+I'm Candidate Jojonomic
 
-This project is a starting point for a Flutter application.
+## Introduction
+My Name is Handika Dwiputra, I'am have 3+ years of experience with SQL Fundamentals (PostgreSQL, SQLite Mobile and Microsoft SQL Server), IT Mobile Developer (Android Native / Flutter Hybrid programming), 
+High Problem Analysis skills from technical or field conditions for all Business Process the Consumer Goods Division and Software House Company.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Module Flutter
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Clean Architecture
+* Dependency Injection with get_it
+* Modularization
+* Reactive Programming (BLoc)
+* Advanced UI
+* using geolocator.
+* Animation Widget using Lottie.
+* Open Weather API.
